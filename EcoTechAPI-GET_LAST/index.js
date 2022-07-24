@@ -1,14 +1,12 @@
 const Register = require('../models/register');
 
-const conn = require('../connections/mongodb');
-
 module.exports = async function (context,req) {
     try {
-        const registers = await Register.find().sort('-date');
+        const register = await Register.findOne().sort('-date');
 
         context.res = {
             status: 200, /* Defaults to 200 */
-            body: registers
+            body: register
         };
 
     } catch (error) {
@@ -16,7 +14,7 @@ module.exports = async function (context,req) {
         
         context.res = {
             status: 500, /* Defaults to 200 */
-            body: {Error: "Algo anda mal", Context: error}
+            body: {Error: "Algo anda mal"}
         };
     }
 }

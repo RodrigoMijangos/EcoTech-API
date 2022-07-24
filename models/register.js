@@ -8,12 +8,14 @@ const registerSchema = new Schema({
         led: Number,
         temperature: Number,
         moisture: Number,
+        water: Number,
         motor: Number
     },
     end_values: {
         led: Number,
         temperature: Number,
         moisture: Number,
+        water: Number,
         motor: Number
     }
 });

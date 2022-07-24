@@ -1,7 +1,5 @@
 const Register = require('../models/register');
 
-const conn = require('../connections/mongodb');
-
 module.exports = async function(context, req){
 
     const body = req.body;
