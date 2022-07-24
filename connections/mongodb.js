@@ -1,10 +1,10 @@
 const Mongo = require('mongoose');
 
-const dbUSER = "dev_EchoTech";
+const dbUSER = process.env["USER_DATABASE"];
 
-const dbPASSWORD = "simple_Password1234";
+const dbPASSWORD = process.env["PASSWORD_DATABASE"];
 
-const DB = "echoTech_Irrigation";
+const DB = process.env["TABLE_DATABASE"];
 
 const dbURI = `mongodb+srv://${dbUSER}:${dbPASSWORD}@sandbox.8hxdl.mongodb.net/${DB}?retryWrites=true&w=majority`;
 
