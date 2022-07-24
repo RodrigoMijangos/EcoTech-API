@@ -3,14 +3,18 @@ const mongodb = require('mongoose');
 const Schema = mongodb.Schema;
 
 const registerSchema = new Schema({
-    _id: Schema.Types.ObjectId,
-    date: String,
-    values: {
-        Value1: Number,
-        Value2: Number,
-        Value3: Number,
-        Value4: Number,
-        Value5: Number
+    date: Date,
+    begin_values: {
+        led: Number,
+        temperature: Number,
+        moisture: Number,
+        motor: Number
+    },
+    end_values: {
+        led: Number,
+        temperature: Number,
+        moisture: Number,
+        motor: Number
     }
 });
 

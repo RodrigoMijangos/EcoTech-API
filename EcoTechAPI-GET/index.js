@@ -2,8 +2,6 @@ const Register = require('../models/register');
 
 const conn = require('../connections/mongodb');
 
-console.log(process.env["database"]);
-
 module.exports = async function (context,req) {
     try {
         const registers = await Register.find();
